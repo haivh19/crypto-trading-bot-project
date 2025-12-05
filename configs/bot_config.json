@@ -1,0 +1,18 @@
+{
+  "feature_cols": [
+    "dist_sma20",
+    "dist_sma50",
+    "rsi",
+    "volatility_7",
+    "volatility_30",
+    "volume_ratio",
+    "momentum_3",
+    "momentum_7",
+    "momentum_14",
+    "macd_hist",
+    "fng"
+  ],
+  "split_date": "2023-01-01",
+  "symbol": "BTC-USD",
+  "initial_capital": 10000
+}
