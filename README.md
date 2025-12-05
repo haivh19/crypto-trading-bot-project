@@ -49,7 +49,7 @@ The bot is designed with a 4-Layer Architecture to ensure modularity and scalabi
 
 1.  **Data Layer:** Ingests OHLCV data via Binance API (CCXT) and Sentiment data.
 2.  **Processing Layer:** Handles ETL, normalization, and feature extraction.
-3.  **Model Layer:** The AI Core (RF / XGBoost / LSTM) predicting probability $P(Up)$.
+3.  **Model Layer:** The AI Core (RF / XGBoost / LSTM) predicting probability P(Up).
 4.  **Strategy Layer:** The decision engine applying the Smart Switch logic.
 
 ![System Architecture](system_architecture.png)
@@ -61,7 +61,7 @@ The bot is designed with a 4-Layer Architecture to ensure modularity and scalabi
 This is the core heuristic algorithm that governs the bot's behavior. It prioritizes capital preservation over profit chasing.
 
 **Logic Breakdown:**
-* **Panic Buy:** If the market is in *Extreme Fear* (Index $\le$ 20), ignore AI and Buy (Mean Reversion).
+* **Panic Buy:** If the market is in *Extreme Fear* (Index <= 20), ignore AI and Buy (Mean Reversion).
 * **Trend Buy:** If AI Confidence > Threshold (e.g., 65%), Buy.
 * **Safety Exit:** If AI predicts a drop AND Market Sentiment is not oversold, Sell to preserve capital.
 
